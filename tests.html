@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpine JS Testing</title>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+  <script src="./scripts.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <div x-html="theNavbar" x-data="{ 'open' : false }"></div>
+
+  <header class="container my-5">
+    <h1>List Management</h1>
+  </header>
+
+  <main class="container">
+
+    <div class="genre-list" x-data="genreData()">
+      <div class="form-group">
+        <label for="genre_name" class="d-block text-uppercase text-center">Enter a genre name</label>
+        <input type="text" 
+          class="form-control border-primary px-3 py-4" 
+          name="genre_name" 
+          id="genre_name"
+          x-model="genre_item"
+          x-ref="genre_name"
+          @keydown.enter="addGenre()"
+          >
+        </button>
+        <ul class="list-group mt-5">
+          <template x-for="genre in genres">
+            <li x-text="genre" class="list-group-item"></li>
+          </template>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>

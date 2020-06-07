@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpine JS Testing</title>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer="defer"></script>
+  <script src="./scripts.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  
+  <div x-html="theNavbar" x-data="{ 'open' : false }"></div>
+
+  <header class="container my-5">
+    <h1>AlpineJS</h1>
+    <p>Jus playin' aroun…</p>
+    <a href="https://github.com/alpinejs/alpine" target="_new">
+      <p>Github Repo & Documentation</p>
+    </a>
+    <a href="https://scrimba.com/g/galpinejs">
+      <p>Alpine JS course on Scrimba</p>
+    </a>
+    <p>Bootstrap components used and triggered with AlpineJS instead of standard Bootstrap JS.</p>
+  </header>
+
+</body>
+</html>

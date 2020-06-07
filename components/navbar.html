@@ -1,0 +1,33 @@
+<nav 
+  class="navbar navbar-expand-md navbar-light bg-light shadow-sm" 
+  x-data="{ 'open' : false }"
+  >
+
+  <div class="container">
+
+    <a class="navbar-brand" href="#">Alpine JS Testing</a>
+
+    <button type="button" 
+      class="navbar-toggler" 
+      @click="open = !open"
+      >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" :class="{ 'show' : open }" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./reveals.html">Reveals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./tests.html">Tests</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</nav>
