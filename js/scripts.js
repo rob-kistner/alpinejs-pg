@@ -16,7 +16,7 @@ const theNavbar = `
         <a class="nav-link" href="/reveals.html">Reveals</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/tests.html">Tests</a>
+        <a class="nav-link" href="/list-management.html">List Management</a>
       </li>
     </ul>
 
@@ -44,6 +44,7 @@ function genreData() {
       this.genres.push(titleCase(this.genre_item));
       this.genre_item='';
       document.getElementById('genre_name').focus();
+      console.log(this.genres)
     }
   }
 }

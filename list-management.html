@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alpine JS Testing</title>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
-  <script src="./scripts.js"></script>
+  <script src="./js/scripts.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
@@ -19,11 +19,11 @@
 
   <main class="container">
 
-    <div class="genre-list" x-data="genreData()">
-      <div class="form-group">
+    <div class="genre-list row justify-content-center" x-data="genreData()">
+      <div class="form-group col-md-8">
         <label for="genre_name" class="d-block text-uppercase text-center">Enter a genre name</label>
         <input type="text" 
-          class="form-control border-primary px-3 py-4" 
+          class="form-control border-primary text-center px-3 py-4" 
           name="genre_name" 
           id="genre_name"
           x-model="genre_item"
